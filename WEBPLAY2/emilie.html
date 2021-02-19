@@ -75,7 +75,7 @@
 
 
 
-	<div class="comp_window drag" style="bottom:105px; left:60px; width:200px; height:480px; z-index:9">
+	<div class="comp_window drag insult" style="bottom:105px; left:60px; width:200px; height:480px; z-index:9; display:none">
 		<div class="top_cwindow">
 			<div class="title_cwindow">
 				Movie1.avi
@@ -86,7 +86,7 @@
 				<i class="far fa-window-close"></i>
 			</div>
 		</div>
-		<div class="content_cwindow" style="height: calc(100% - 44.60px); padding:0">
+		<div class="content_cwindow" style="height: calc(100% - 44.60px); padding:0;">
 			<div class="easter_egg">
 				<div class="easter_egg_cover">"A world tour"<br>DO NOT TOUCH</div>
 				<img src="https://media1.tenor.com/images/6e12510b30f314c21bbc24cd29f07a4a/tenor.gif?itemid=18138643" style="width:100%; margin-bottom:100px"/>
@@ -110,9 +110,9 @@
 			</p>
 		</div>
 	</div>
-	<div class="comp_window drag" style="top:185px; right:240px; width:290px; height:180px; z-index:7">
+	<div class="comp_window drag" style="top:185px; right:240px; width:290px; height:180px; z-index:2">
 	</div>
-	<div class="comp_window drag" style="top:165px; right:220px; width:290px; height:180px; z-index:6">
+	<div class="comp_window drag" style="top:165px; right:220px; width:290px; height:180px; z-index:1">
 	</div>
 	<div class="comp_window drag" style="top:50vh; left:50vw; transform:translate(-50%, -50%); z-index:9999">
 		<div class="top_cwindow">
@@ -145,6 +145,42 @@
 		<div class="content_cwindow">
 			<p>
 				Houdini has crashed.
+			</p>
+		</div>
+	</div>
+
+	<div class="comp_window window2" style="top:170px; left:470px; width:300px; height:200px; display:none">
+		<div class="top_cwindow">
+			<div class="title_cwindow">
+				diary 14/07/02.exe
+			</div>
+			<div class="tools_cwindow">
+				<i class="far fa-window-minimize"></i>
+				<i class="far fa-window-maximize"></i>
+				<i class="far fa-window-close"></i>
+			</div>
+		</div>
+		<div class="content_cwindow">
+			<p>
+				Mother is a wretch, she keeps lying about my adoption but I know, deep down, that she isn't mother.
+			</p>
+		</div>
+	</div>
+
+	<div class="comp_window window3" style="top:570px; left:1070px; width:300px; height:200px; display:none;">
+		<div class="top_cwindow">
+			<div class="title_cwindow">
+				diary 17/07/02.exe
+			</div>
+			<div class="tools_cwindow">
+				<i class="far fa-window-minimize"></i>
+				<i class="far fa-window-maximize"></i>
+				<i class="far fa-window-close"></i>
+			</div>
+		</div>
+		<div class="content_cwindow">
+			<p>
+				I killed a cat yesterday, I don't know if I regret it.
 			</p>
 		</div>
 	</div>
@@ -192,7 +228,7 @@
 
 <script>
         $(document).ready(function() {
-  var a = 3;
+  var a = 10;
   $('.drag').draggable({
     start: function(event, ui) {
       $(this).css("z-index", a++);
@@ -200,5 +236,30 @@
   });
 });
     </script>
+
+<script>
+	$('body').click(function(){
+    $(".insult").addClass("display");
+    $("body").after("<div class='dialogue'><p>I have to delete this.</p></div>");
+});
+</script>
+
+<script>
+	$('.insult i').click(function(){
+    $(".window2").addClass("display");
+});
+</script>
+
+<script>
+	$('.window2 i').click(function(){
+    $(".window3").addClass("display");
+});
+</script>
+
+<script>
+	$('.dialogue').click(function(){
+    $(this).addClass("undisplay");
+});
+</script>
 </body>
 </html>

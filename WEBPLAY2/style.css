@@ -172,6 +172,46 @@ p {
 	transform:translateY(100%);
 }
 
+.display {
+	display:block!important;
+}
+
+.undisplay {
+	opacity:0!important;
+}
+
+.dialogue {
+	position:absolute;
+	z-index:9999999;
+	border:2px solid pink;
+	border-radius:5px;
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	color:blue;
+	font-size:20px;
+	width:80vw;
+	height:100px;
+	font-family:'vcr_osd_monoregular';
+	background: pink;
+	bottom:50px;
+	left:50vw;
+	transform: translateX(-50%);
+	animation:'appear' 3s;
+}
+
+@keyframes appear {
+	0% {
+		opacity:0;
+	}
+
+	50% {
+		opacity:0;
+	}
+
+	100% {opacity:1s;}
+}
+
 
 
 /***** ANIMATIONS *****/ 
