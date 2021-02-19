@@ -1,204 +1,48 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
-	<title>BAD TALES</title>
-	<meta charset="UTF-8", name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
-	<!------- FONTS -------->
-	<script src="https://kit.fontawesome.com/49007502c4.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="font/vcr.css">
-	<link rel="stylesheet" type="text/css" href="font/virus.css">
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-	<!------------------- SCRIPTS ------------------>
-	<script src="js/hour.js"></script>
-	<!----- SUPER DRAG AND DROP ------>
-	<script src="js/jquery-1.5.2.min.js"></script>
-    <script src="js/jquery-ui-1.8.9.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Tales</title>
+    <script src="portal/scriptportal.js"></script>
+<link rel="stylesheet" href="portal/styleportal.css">
 </head>
+
 <body>
+    <div class="bg-noise"></div>
+    <video class="lechambre" autoplay loop muted>
+        <source src="portal/chambre.mp4" type="video/mp4">
+      </video>
 
-	<marquee truespeed="10" behavior="alternate" style="text-transform: uppercase; padding:10px 0px">bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming bad tales are coming</marquee>
+    <audio autoplay muted>
+        <source src="portal/beyondinfancy.mp3" type="audio/mpeg">
+    </audio>
 
-	<div id="hours"></div>
-    <script type="text/javascript">window.onload = date_heure('hours');</script>
+    <a href="#">
+        <div class="tvlud">
+        </div>
+    </a>
 
+    <a href="#">
+        <div class="windownemo">
+        </div>
+    </a>
 
+    <a href="#">
+        <div class="dessouslitquentin">
+        </div>
+    </a>
 
+    <a href="#">
+        <div class="vrhugo">
+        </div>
+    </a>
 
-	<div class="folder_zone">
-		<div class="folder_wrap" style="left:20px; top:25px">
-			<div class="folder" title="Family memories">
-				<i class="fas fa-folder fold"></i>
-				<div class="comp_window" style="display:none; width:200px; height:200px; top:29px; left:87px; z-index:999">
-					<div class="top_cwindow">
-						<div class="title_cwindow">
-							family.jpg
-						</div>
-						<div class="tools_cwindow">
-							<i class="far fa-window-minimize"></i>
-							<i class="far fa-window-maximize"></i>
-							<i class="far fa-window-close"></i>
-						</div>
-					</div>
-					<div class="content_cwindow">
-						<img src="assets/meme.jpg"/>
-					</div>
-				</div>
-			</div>
-			<p class="left">Family memories</p>
-		</div>
+    <a href="#">
+        <div class="ordiemi">
+        </div>
+    </a>
 
-		<div class="folder_wrap" style="left:100px; top:150px;">
-			<p class="right">Me me me</p>
-			<div class="folder" title="Family memories">
-				<i class="fas fa-folder fold"></i>
-				<div class="comp_window" style="display:none; width:200px; height:200px; top:29px; right:87px; z-index:999">
-					<div class="top_cwindow">
-						<div class="title_cwindow">
-							me.jpg
-						</div>
-						<div class="tools_cwindow">
-							<i class="far fa-window-minimize"></i>
-							<i class="far fa-window-maximize"></i>
-							<i class="far fa-window-close"></i>
-						</div>
-					</div>
-					<div class="content_cwindow">
-						<img src="assets/meme.jpg"/>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
-
-
-	<div class="comp_window drag" style="bottom:105px; left:60px; width:200px; height:480px; z-index:9">
-		<div class="top_cwindow">
-			<div class="title_cwindow">
-				Movie1.avi
-			</div>
-			<div class="tools_cwindow">
-				<i class="far fa-window-minimize"></i>
-				<i class="far fa-window-maximize"></i>
-				<i class="far fa-window-close"></i>
-			</div>
-		</div>
-		<div class="content_cwindow" style="height: calc(100% - 44.60px); padding:0">
-			<div class="easter_egg">
-				<div class="easter_egg_cover">"A world tour"<br>DO NOT TOUCH</div>
-				<img src="https://media1.tenor.com/images/6e12510b30f314c21bbc24cd29f07a4a/tenor.gif?itemid=18138643" style="width:100%; margin-bottom:100px"/>
-			</div>
-		</div>
-	</div>
-	<div class="comp_window drag" style="top:205px; right:260px; width:290px; height:180px; z-index:8">
-		<div class="top_cwindow">
-			<div class="title_cwindow">
-				
-			</div>
-			<div class="tools_cwindow">
-				<i class="far fa-window-minimize"></i>
-				<i class="far fa-window-maximize"></i>
-				<i class="far fa-window-close"></i>
-			</div>
-		</div>
-		<div class="content_cwindow" style="margin-top: -3px;height: calc(100% - 41.60px); justify-content: flex-start; align-items: initial">
-			<p>
-				>://
-			</p>
-		</div>
-	</div>
-	<div class="comp_window drag" style="top:185px; right:240px; width:290px; height:180px; z-index:7">
-	</div>
-	<div class="comp_window drag" style="top:165px; right:220px; width:290px; height:180px; z-index:6">
-	</div>
-	<div class="comp_window drag" style="top:50vh; left:50vw; transform:translate(-50%, -50%); z-index:9999">
-		<div class="top_cwindow">
-			<div class="title_cwindow">
-				Windows.exe
-			</div>
-			<div class="tools_cwindow">
-				<i class="far fa-window-minimize"></i>
-				<i class="far fa-window-maximize"></i>
-				<i class="far fa-window-close"></i>
-			</div>
-		</div>
-		<div class="content_cwindow" style="font-family:'virus_01regular'; text-transform: uppercase;">
-			<p data-text="You lack talent. (´∀｀)♡" class="lack_talent">
-				You lack talent. (´∀｀)♡
-			</p>
-		</div>
-	</div>
-	<div class="comp_window" style="top:50px; right:50px; width:70%; height:80%">
-		<div class="top_cwindow">
-			<div class="title_cwindow">
-				Houdini.exe
-			</div>
-			<div class="tools_cwindow">
-				<i class="far fa-window-minimize"></i>
-				<i class="far fa-window-maximize"></i>
-				<i class="far fa-window-close"></i>
-			</div>
-		</div>
-		<div class="content_cwindow">
-			<p>
-				Houdini has crashed.
-			</p>
-		</div>
-	</div>
-
-	<div class="comp_window drag" style="bottom:80px; right:500px; width:150px; height:80px">
-		<div class="content_cwindow" style="height: 100%; text-align:center; background:pink; color:blue">
-			<p>
-				ฅ^•ﻌ•^ฅ
-			</p>
-		</div>
-	</div>
-
-<marquee onclick="play()" direction="down" width="250" height="200" behavior="alternate" style="border:solid; position:absolute; right:100px; bottom:100px; background:blue; border-radius:2px">
-  <marquee behavior="alternate">
-    d4rk sasuke
-  </marquee>
-</marquee>
-
-
-<script>
-      function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-      }
-</script>
-
-    <audio id="audio" src="sound/click.mp3"></audio>
-
-<script>
-		$(".fold").click(function () {
-
-	    $resume_title = $(this);
-	    $content = $resume_title.next();
-	    $content.slideToggle(300, function () {
-	    });
-
-	});
-</script>
-
-<script>
-		$('.fa-folder').click(function() {
-	    $(this).toggleClass('fold');
-	    $(this).toggleClass('unfold');
-	});</script>
-
-<script>
-        $(document).ready(function() {
-  var a = 3;
-  $('.drag').draggable({
-    start: function(event, ui) {
-      $(this).css("z-index", a++);
-    }
-  });
-});
-    </script>
 </body>
 </html>
