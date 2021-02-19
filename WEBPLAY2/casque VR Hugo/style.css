@@ -10,6 +10,8 @@
   position: absolute;
 }
 
+.control-panel {display:none!important;}
+
 a {
   color: white;
   text-decoration: none;
