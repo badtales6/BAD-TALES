@@ -1,0 +1,332 @@
+body {
+	font-family:'vcr_osd_monoregular';
+	font-size:18px;
+	background:blue;
+	margin:0;
+	padding:0;
+	color:pink;
+	overflow:hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	margin:0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+#hours {
+	position:absolute;
+	bottom:5px; right:5px;
+}
+
+.folder_zone {
+	width:300px;
+	height:100%;
+	position:relative;
+}
+
+.folder_wrap {
+	position:absolute;
+	display: flex;
+	align-items: center;
+}
+
+.folder {
+	background: url(assets/smoke.png);
+	background-size: cover;
+	height: 100px;
+	width: 100px;
+	background-position: 0px 5px;
+	background-repeat: no-repeat;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.folder .fold, .folder .unfold {
+	font-size:56px;
+	cursor:pointer;
+}
+
+.folder .fold:before {
+	content:"\f07b";
+}
+
+.folder .unfold:before {
+	content:"\f07c";
+}
+
+.folder_wrap p.left:before {
+	content:'\f0da';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900; margin-right:7px;
+}
+
+.folder_wrap p.right:after {
+	content:'\f0d9';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900; margin-left:7px;
+}
+
+.comp_window {
+	width:400px;
+	height:250px;
+	border:3px solid;
+	border-radius:2px;
+	position:absolute;
+	background:blue;
+	z-index:0;
+}
+
+.top_cwindow {
+	display:flex;
+	padding:10px;
+	border-bottom:3px solid;
+	justify-content: space-between;
+	background:pink;
+	color:blue;
+}
+
+.title_cwindow {
+	font-size:16px;
+}
+
+.tools_cwindow i {
+	cursor:pointer;
+}
+
+.content_cwindow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100% - 44.60px);
+	text-align: center;
+	padding:20px;
+}
+
+.lack_talent {
+	animation: 'glitch2' 1s infinite linear alternate-reverse;
+	position: relative
+}
+
+.lack_talent::before{
+	left: 3px;
+	text-shadow: -2px 0 red;
+	animation: glitch-1 2s linear infinite reverse;
+}
+
+.lack_talent::after{
+	left: -3px;
+	text-shadow: -2px 0 blue;
+	animation: glitch-2 2s linear infinite reverse;
+}
+	
+	
+.lack_talent::after, .lack_talent::before {
+	padding: 30px;
+	color: white;
+	content: attr(data-text);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	top: -30px;
+	left: -30px;
+}
+
+.easter_egg {
+	display:inline; 
+	overflow:hidden; 
+	height:100%;
+	position:relative;
+}
+
+.easter_egg_cover {
+	background:blue;
+	position:absolute;
+	z-index:3;
+	width:100%;
+	height:100%;
+	transition:0.3s ease-in-out;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
+
+.easter_egg:hover .easter_egg_cover {
+	transform:translateY(100%);
+}
+
+
+
+/***** ANIMATIONS *****/ 
+
+@keyframes glitch-1 {
+  0% {
+    clip: rect(132px, auto, 101px, 30px);
+  }
+  5% {
+    clip: rect(17px, auto, 94px, 30px);
+  }
+  10% {
+    clip: rect(40px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(87px, auto, 82px, 30px);
+  }
+  20% {
+    clip: rect(137px, auto, 61px, 30px);
+  }
+  25% {
+    clip: rect(34px, auto, 14px, 30px);
+  }
+  30% {
+    clip: rect(133px, auto, 74px, 30px);
+  }
+  35% {
+    clip: rect(76px, auto, 107px, 30px);
+  }
+  40% {
+    clip: rect(59px, auto, 130px, 30px);
+  }
+  45% {
+    clip: rect(29px, auto, 84px, 30px);
+  }
+  50% {
+    clip: rect(22px, auto, 67px, 30px);
+  }
+  55% {
+    clip: rect(67px, auto, 62px, 30px);
+  }
+  60% {
+    clip: rect(10px, auto, 105px, 30px);
+  }
+  65% {
+    clip: rect(78px, auto, 115px, 30px);
+  }
+  70% {
+    clip: rect(105px, auto, 13px, 30px);
+  }
+  75% {
+    clip: rect(15px, auto, 75px, 30px);
+  }
+  80% {
+    clip: rect(66px, auto, 39px, 30px);
+  }
+  85% {
+    clip: rect(133px, auto, 73px, 30px);
+  }
+  90% {
+    clip: rect(36px, auto, 128px, 30px);
+  }
+  95% {
+    clip: rect(68px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(14px, auto, 100px, 30px);
+  }
+}
+@keyframes glitch-2 {
+  0% {
+    clip: rect(129px, auto, 36px, 30px);
+  }
+  5% {
+    clip: rect(36px, auto, 4px, 30px);
+  }
+  10% {
+    clip: rect(85px, auto, 66px, 30px);
+  }
+  15% {
+    clip: rect(91px, auto, 91px, 30px);
+  }
+  20% {
+    clip: rect(148px, auto, 138px, 30px);
+  }
+  25% {
+    clip: rect(38px, auto, 122px, 30px);
+  }
+  30% {
+    clip: rect(69px, auto, 54px, 30px);
+  }
+  35% {
+    clip: rect(98px, auto, 71px, 30px);
+  }
+  40% {
+    clip: rect(146px, auto, 34px, 30px);
+  }
+  45% {
+    clip: rect(134px, auto, 43px, 30px);
+  }
+  50% {
+    clip: rect(102px, auto, 80px, 30px);
+  }
+  55% {
+    clip: rect(119px, auto, 44px, 30px);
+  }
+  60% {
+    clip: rect(106px, auto, 99px, 30px);
+  }
+  65% {
+    clip: rect(141px, auto, 74px, 30px);
+  }
+  70% {
+    clip: rect(20px, auto, 78px, 30px);
+  }
+  75% {
+    clip: rect(133px, auto, 79px, 30px);
+  }
+  80% {
+    clip: rect(78px, auto, 52px, 30px);
+  }
+  85% {
+    clip: rect(35px, auto, 39px, 30px);
+  }
+  90% {
+    clip: rect(67px, auto, 70px, 30px);
+  }
+  95% {
+    clip: rect(71px, auto, 103px, 30px);
+  }
+  100% {
+    clip: rect(83px, auto, 40px, 30px);
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  48% {
+    transform: skew(0deg, 0deg);
+    filter: blur(0);
+  }
+  50% {
+    transform: skew(-20deg, 0deg);
+    filter: blur(4px);
+  }
+  52% {
+    transform: skew(20deg, 0deg);
+  }
+  54% {
+    transform: skew(0deg, 0deg);
+    filter: blur(0);
+  }
+  100% {
+    transform: skew(0deg, 0deg);
+  }
+}

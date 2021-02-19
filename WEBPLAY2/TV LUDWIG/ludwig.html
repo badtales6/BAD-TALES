@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+
+        div.hover {
+background-color: red;
+        }
+        
+        .room {
+            background-image: url(bedroom_02.gif);
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        .monster {
+            background-image: url(monster_01.gif);
+            opacity: 80%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .child {
+            background-image: url(enfant.png);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="room"></div>
+
+    <script>
+        console.log("begin");
+        let array = []
+        const WIDTH = 800;
+        const HEIGHT = 800;
+        const SPEED = 10;
+
+        //gsap timeline voir la doc
+        var tl = gsap.timeline({
+            onComplete: function() {
+                window.requestAnimationFrame(step);
+            }
+        });
+
+        for (let index = 0; index < 50; index++) {
+            //Création des monstres
+            div = document.createElement('div');
+            div.classList.add("monster");
+            div.style.left = 0;
+            div.style.top = 0;
+            document.body.appendChild(div);
+
+            //stocke tous les monstres dans un tableau
+            array.push(div);
+
+            //Animation début
+            tl.to(div, {
+                duration: 2,
+                x: Math.random() * WIDTH,
+                y: Math.random() * HEIGHT,
+            }, 0);
+        }
+
+
+        console.log(array);
+        //Boucle infinie pour l'animation
+        function step() {
+
+            let div;
+            for (let i = 0; i < array.length; i++) {
+
+                div = array[i];
+
+                nextPosX = div.getBoundingClientRect().left + (Math.random() * SPEED - SPEED / 2);
+
+                if (i == 0) {
+                    console.log(nextPosX);
+
+                }
+
+                if (nextPosX > WIDTH) {
+                    nextPosX = WIDTH;
+                }
+
+                if (nextPosX < 0) {
+                    nextPosX = 0;
+                }
+
+                nextPosY = div.getBoundingClientRect().top + (Math.random() * SPEED - SPEED / 2);
+                if (nextPosY > HEIGHT) {
+                    nextPosY = HEIGHT;
+                }
+
+                if (nextPosY < 0) {
+                    nextPosY = 0;
+                }
+
+                div.style.transform = "translate(" + nextPosX + "px," + nextPosY + "px)";
+
+            }
+
+            window.requestAnimationFrame(step);
+        }
+    </script>
+</body>
+
+</html>

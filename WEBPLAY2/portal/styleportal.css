@@ -1,0 +1,86 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black; 
+}
+
+
+.lechambre
+    {
+        width: 100vw;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+      }
+
+
+.bg-noise {
+  width: 100vw;
+  height: 100vh;
+  background: url("https://i.ibb.co/FgcVfGG/bg-noise-1.png"), #1b1c20;
+  background-size: cover;
+  animation: 250ms steps(10, end) 0s infinite alternate-reverse none running 'noise-animation';
+  position: absolute;
+  z-index: 1;
+  mix-blend-mode: color-dodge;
+}
+
+        @keyframes noise-animation {
+          0% { background-position: 0% 0%; }
+          10% { background-position: -5% -5%; }
+          20% { background-position: -10% 5%; }
+          30% { background-position: 5% -10%; }
+          40% { background-position: -5% 15%; }
+          50% { background-position: -10% 5%; }
+          60% { background-position: 5% 5%; }
+          70% { background-position: 0% 10%; }
+          80% { background-position: -5% -5%; }
+          90% { background-position: 10% 5%; }
+        }
+.tvlud {
+  width: 403px;
+  height: 265px;
+  position: absolute;
+  left: 403px;
+  top: 338px;
+  z-index:99;
+}
+
+.windownemo {
+  height: 466.4143px;
+  width: 359px;
+  position: absolute;
+  top: 75px;
+  left: 910px;
+  z-index:99;
+}
+
+.dessouslitquentin {
+  height: 32px;
+  width: 684px;
+  position: absolute;
+  bottom: 0;
+  left: 114px;
+  z-index: 99;
+  }
+
+.vrhugo {
+  position: absolute;
+  z-index: 99;
+  height: 124px;
+  width: 163px;
+  left: 961px;
+  bottom: 26px;
+}
+
+.ordiemi {
+  position: absolute;
+  z-index: 99;
+  height: 81px;
+  width: 136px;
+  bottom: 35px;
+  right: 620px;
+  transform: rotate(-45deg) skewY(17deg) skewX(14deg);
+}
