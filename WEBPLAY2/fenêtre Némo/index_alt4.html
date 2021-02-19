@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body,
+        html {
+            background-color: black;
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
+            min-width: 100vw;
+            margin: 0;
+            padding: 0;
+            perspective: 2000px;
+        }
+
+        .fenetre {
+            width: 600px;
+            height: 600px;
+            background-color: red;
+            position: relative;
+        }
+
+        .fenetre2 {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            overflow: hidden;
+            background: url("fond2.png");
+            background-position: center;
+            background-size: cover;
+            display: none;
+            pointer-events: none;
+        }
+
+        #Jumelles {
+            width: 1200px;
+            height: 1200px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .gauche {
+            background-color: blue;
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: 0;
+            animation-name: anim-gauche;
+            animation-duration: 1.5s;
+            animation-delay: 3.25s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+        }
+
+        .droite {
+            background-color: blue;
+            height: 100%;
+            width: 50%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform-origin: 100%;
+            animation-name: anim-droite;
+            animation-duration: 1.5s;
+            animation-delay: 3.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+        }
+
+        .fade {
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background-color: black;
+            animation-name: fade;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes anim-gauche {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(-120deg);
+            }
+        }
+
+        @keyframes anim-droite {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(120deg);
+            }
+        }
+    </style>
+    <script src="codev2.js"></script>
+</head>
+
+<body>
+
+    <div class="fade"></div>
+
+    <div id="fenetre" class="fenetre">
+        <img src="fond.png" alt="" class="fenetre">
+        <img src="fenetre_gauche.jpg" alt="" class="gauche">
+        
+        <!-- <div class="gauche"></div> -->
+        <img src="fenetre_droite.jpg" alt="" class="droite">
+        
+    </div>
+    <div id="fenetre2" class="fenetre2">
+        <img src="jumelles2.png" alt="" id="Jumelles">
+    </div>
+
+</body>
+
+</html>
